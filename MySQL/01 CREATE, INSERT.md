@@ -163,20 +163,20 @@ vi /etc/mysql/my.cnf
 ### my.cnf 파일 수정
 1. 키보드에서 i를 입력(끼워 넣기)
 
-2. [client] 부분밑에 추가
-default-character-set = utf8
+2. [client] 부분밑에 추가<br>
+default-character-set = utf8<br>
 
-3. [mysqld] 부분밑에 추가
-init_connect= SET collation_connection= utf8_general_ci
-init_connect= SET NAMES utf8
-character-set-server = utf8
-collation-server = utf8_general_ci
+3. [mysqld] 부분밑에 추가<br>
+init_connect= SET collation_connection= utf8_general_ci<br>
+init_connect= SET NAMES utf8<br>
+character-set-server = utf8<br>
+collation-server = utf8_general_ci<br>
 
-4. [mysqldump]부분밑에 추가
-default-character-set = utf8
+4. [mysqldump]부분밑에 추가<br>
+default-character-set = utf8<br>
 
-5. [mysql]부분밑에 추가
-default-character-set = utf8
+5. [mysql]부분밑에 추가<br>
+default-character-set = utf8<br>
 
 ### vi 편집기 빠져나오기
 1. 키보드의 좌측 최상단 Esc 키 누르기
@@ -193,3 +193,8 @@ showvariablse like 'c%';
 데이터베이스 접속해서 데이터베이스 문자열 속성이 utf8로 잘 바뀌었나 확인
 
 <img src="https://github.com/yuwltn/yuwltn/blob/main/photo/utf8_2.PNG" width="500" height="250" >
+
+다시 접속했는데 안바뀌면
+```sql
+update coffeetbl set 칼럼이름='tablename' WHERE CCODE=1;
+```
